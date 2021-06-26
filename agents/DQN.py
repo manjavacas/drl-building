@@ -85,7 +85,6 @@ with mlflow.start_run(run_name=name):
     # timesteps = n_episodes * n_timesteps_episode + 501
 
     # env = DummyVecEnv([lambda: env])
-    # env.env_method('activate_logger')
 
     # # Callbacks
     # freq = 5  # evaluate every N episodes
