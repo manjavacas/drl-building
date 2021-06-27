@@ -53,7 +53,7 @@ with mlflow.start_run(run_name=name):
     mlflow.log_param('max_grad_norm', args.max_grad_norm)
 
     env = gym.make(environment)
-    env = NormalizeObservation(env)
+    env = NormalizeObservation(LoggerWrapper(env))
 
     #### TRAINING ####
 

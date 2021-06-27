@@ -9,7 +9,7 @@ import mlflow
 import numpy as np
 
 from energym.utils.callbacks import LoggerCallback, LoggerEvalCallback
-from energym.utils.wrappers import NormalizeObservation
+from energym.utils.wrappers import NormalizeObservation, LoggerWrapper
 
 from stable_baselines3 import SAC
 from stable_baselines3.common.callbacks import EvalCallback, BaseCallback, CallbackList
@@ -49,8 +49,9 @@ with mlflow.start_run(run_name=name):
     mlflow.log_param('train_freq', args.train_freq)
     mlflow.log_param('gradient_steps', args.gradient_steps)
     mlflow.log_param('target_update_interval', args.target_update_interval)
+    
     env = gym.make(environment)
-    env = NormalizeObservation(env)
+    env = NormalizeObservation(LoggerWrapper(env))
 
     #### TRAINING ####
 
@@ -87,7 +88,7 @@ with mlflow.start_run(run_name=name):
 
     #### LOAD MODEL ####
 
-    model = SAC.load(name)
+    model = SAC.load('best_models/' + name + '/best_model.zip')
 
     for i in range(n_episodes - 1):
         obs = env.reset()
@@ -100,9 +101,8 @@ with mlflow.start_run(run_name=name):
             rewards.append(reward)
             if info['month'] != current_month:
                 current_month = info['month']
-                print(info['timestep'], sum(rewards))
-        print('Episode ', i, 'Mean reward: ', np.mean(
-            rewards), 'Cumulative reward: ', sum(rewards))
+                print(info['month'], sum(rewards))
+        print('Episode ', i, 'Mean reward: ', np.mean(rewards), 'Cumulative reward: ', sum(rewards))
     env.close()
 
     mlflow.log_metric('mean_reward', np.mean(rewards))

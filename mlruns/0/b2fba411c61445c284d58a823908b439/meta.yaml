@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/energym/mlruns/0/b2fba411c61445c284d58a823908b439/artifacts
+end_time: 1624719842354
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: b2fba411c61445c284d58a823908b439
+run_uuid: b2fba411c61445c284d58a823908b439
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1624719841117
+status: 4
+tags: []
+user_id: root

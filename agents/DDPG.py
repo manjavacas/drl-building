@@ -48,7 +48,7 @@ with mlflow.start_run(run_name=name):
     mlflow.log_param('gradient_steps', args.gradient_steps)
 
     env = gym.make(environment)
-    env = NormalizeObservation(env)
+    env = NormalizeObservation(LoggerWrapper(env))
 
     #### TRAINING ####
 

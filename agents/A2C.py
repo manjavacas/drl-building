@@ -49,7 +49,7 @@ with mlflow.start_run(run_name=name):
     mlflow.log_param('rms_prop_eps', args.rms_prop_eps)
 
     env = gym.make(environment)
-    env = NormalizeObservation(env)
+    env = NormalizeObservation(LoggerWrapper(env))
 
     #### TRAINING ####
 
