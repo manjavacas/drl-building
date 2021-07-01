@@ -1,4 +1,4 @@
-**Trabajo Fin de Máster. Máster Oficial en Ciencia de Datos e Ingeniería de Computadores**
+**Trabajo Fin de Máster. Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores**
 
 [Antonio Manjavacas Lucas](<manjavacas@correo.ugr.es>)
 
