@@ -8,7 +8,7 @@ Universidad de Granada
 
 # Deep Reinforcement Learning para control energético eficiente de edificios
 
-## Resumen
+## Resumen 📖
 
 En las últimas décadas, tanto el calentamiento global como el cambio climático se han visto significativamente alentados por la demanda energética de edificios residenciales y comerciales. Estos son responsables de un tercio del consumo mundial de energía y de hasta un 40\% de las emisiones de CO2, mayormente producidas por los sistemas de calefacción, ventilación y aire acondicionado (HVAC) destinados a garantizar el bienestar de sus ocupantes.
 
@@ -18,7 +18,7 @@ En contraposición a estos métodos tradicionales, en los últimos años se ha e
 
 En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el desarrollo de un entorno de ejecución de simulaciones energéticas orientado al uso y evaluación de diferentes algoritmos de DRL en control HVAC. A su vez, se profundizará en la experimentación con estos algoritmos haciendo uso del entorno implementado, evaluando los resultados obtenidos en términos de consumo energético y confort.
 
-## Guía del repositorio
+## Guía del repositorio 🔭
 
 * [agents](https://github.com/manjavacas/drl-building/tree/main/agents): _scripts_ destinados al entrenamiento y ejecución de los agentes empleados. Estos son:
     - [A2C](https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html): _Advantage Actor Critic_.
@@ -33,8 +33,10 @@ En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el d
 * [plots](https://github.com/manjavacas/drl-building/tree/main/plots): datos y gráficos generados a partir de los resultados de las simulaciones.
 * [tensorboard_logs](https://github.com/manjavacas/drl-building/tree/main/tensorboard_log): _logs_ registrados durante los entrenamiento y empleados por [TensorBoard](https://www.tensorflow.org/tensorboard).
 
-## Desarrollo de Energym
+## Desarrollo de Energym 💡
 
 Los resultados han sido obtenidos a partir del entrenamiento y ejecución de diferentes agentes en el entorno de ejecución de simulaciones energéticas [Energym](https://github.com/jajimer/energym) (versión 1.0.0), elaborado a lo largo de este TFM. Pulsa [aquí](https://energym.readthedocs.io/) para acceder a la documentación de Energym.
 
-![Energym](https://github.com/manjavacas/drl-building/tree/main/images/energym_diagram.png)
+<p align="center">
+  <img src="https://github.com/manjavacas/drl-building/tree/main/images/energym_diagram.png">
+</p>
