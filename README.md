@@ -37,6 +37,4 @@ En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el d
 
 Los resultados han sido obtenidos a partir del entrenamiento y ejecución de diferentes agentes en el entorno de ejecución de simulaciones energéticas [Energym](https://github.com/jajimer/energym) (versión 1.0.0), elaborado a lo largo de este TFM. Pulsa [aquí](https://energym.readthedocs.io/) para acceder a la documentación de Energym.
 
-<p align="center">
-  <img src="https://github.com/manjavacas/drl-building/tree/main/images/energym_diagram.png">
-</p>
+![Arquitectura de Energym](/images/energym_diagram.png)
