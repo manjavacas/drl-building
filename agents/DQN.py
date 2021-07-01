@@ -9,7 +9,7 @@ import mlflow
 import numpy as np
 
 from energym.utils.callbacks import LoggerCallback, LoggerEvalCallback
-from energym.utils.wrappers import NormalizeObservation
+from energym.utils.wrappers import NormalizeObservation, LoggerWrapper
 
 from stable_baselines3 import DQN
 from stable_baselines3.common.callbacks import EvalCallback, BaseCallback, CallbackList
@@ -85,6 +85,7 @@ with mlflow.start_run(run_name=name):
     # timesteps = n_episodes * n_timesteps_episode + 501
 
     # env = DummyVecEnv([lambda: env])
+    # env.env_method('activate_logger')
 
     # # Callbacks
     # freq = 5  # evaluate every N episodes

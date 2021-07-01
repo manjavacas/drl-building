@@ -6,6 +6,7 @@ import numpy as np
 import mlflow
 
 from energym.utils.controllers import RuleBasedController
+from energym.utils.wrappers import LoggerWrapper
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--environment', '-env', type=str, default=None)
@@ -16,6 +17,7 @@ environment = args.environment
 n_episodes = args.episodes
 
 env = gym.make(environment)
+env = LoggerWrapper(env)
 
 name = 'RAND-' + environment + '-' + str(n_episodes) + '-episodes'
 

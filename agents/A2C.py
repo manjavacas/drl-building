@@ -9,7 +9,7 @@ import mlflow
 import numpy as np
 
 from energym.utils.callbacks import LoggerCallback, LoggerEvalCallback
-from energym.utils.wrappers import NormalizeObservation
+from energym.utils.wrappers import NormalizeObservation, LoggerWrapper
 
 from stable_baselines3 import A2C
 from stable_baselines3.common.callbacks import EvalCallback, BaseCallback, CallbackList

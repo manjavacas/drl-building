@@ -49,7 +49,6 @@ with mlflow.start_run(run_name=name):
     mlflow.log_param('train_freq', args.train_freq)
     mlflow.log_param('gradient_steps', args.gradient_steps)
     mlflow.log_param('target_update_interval', args.target_update_interval)
-    
     env = gym.make(environment)
     env = NormalizeObservation(LoggerWrapper(env))
 
