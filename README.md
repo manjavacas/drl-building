@@ -18,7 +18,7 @@ En contraposición a estos métodos tradicionales, en los últimos años se ha e
 
 En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el desarrollo de un entorno de ejecución de simulaciones energéticas orientado al uso y evaluación de diferentes algoritmos de DRL en control HVAC. A su vez, se profundizará en la experimentación con estos algoritmos haciendo uso del entorno implementado, evaluando los resultados obtenidos en términos de consumo energético y confort.
 
-## Guía del repositorio 🔭
+## Guía del repositorio 🔎
 
 * [agents](https://github.com/manjavacas/drl-building/tree/main/agents): _scripts_ destinados al entrenamiento y ejecución de los agentes empleados. Estos son:
     - [A2C](https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html): _Advantage Actor Critic_.
