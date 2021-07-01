@@ -38,3 +38,9 @@ En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el d
 Los resultados han sido obtenidos a partir del entrenamiento y ejecución de diferentes agentes en el entorno de ejecución de simulaciones energéticas [Energym](https://github.com/jajimer/energym) (versión 1.0.0), elaborado a lo largo de este TFM. Pulsa [aquí](https://energym.readthedocs.io/) para acceder a la documentación de Energym.
 
 ![Arquitectura de Energym](/images/energym_diagram.png)
+
+## Agradecimientos 🎁
+
+Gracias a Juan Gómez, Miguel Molina, Javier Jiménez y Alejandro Campoy por su implicación y supervisión a lo largo del desarrollo de este proyecto. 
+
+Este trabajo se enmarca dentro del proyecto [PROFICIENT](https://jgromero.github.io/proficient/), financiado por el programa EXPLORA del Ministerio de Ciencia, Innovación y Universidades (TIN2017-91223-EXP) y orientado al desarrollo de soluciones basadas en DRL para el control energético eficiente de edificios.
