@@ -1,8 +1,8 @@
 **Trabajo Fin de Máster. Máster Oficial en Ciencia de Datos e Ingeniería de Computadores**
 
-Autor: Antonio Manjavacas Lucas (<manjavacas@correo.ugr.es>)
+[Antonio Manjavacas Lucas](<manjavacas@correo.ugr.es>)
 
-Curso: 2020-2021
+Curso 2020-2021
 
 Universidad de Granada
 
@@ -10,7 +10,7 @@ Universidad de Granada
 
 ## Resumen
 
-En las últimas décadas, tanto el calentamiento global como el cambio climático se han visto significativamente alentados por la demanda energética de edificios residenciales y comerciales. Estos son responsables de un tercio del consumo mundial de energía y de hasta un 40\% de las emisiones de $$CO_2$$, mayormente producidas por los sistemas de calefacción, ventilación y aire acondicionado (HVAC) destinados a garantizar el bienestar de sus ocupantes.
+En las últimas décadas, tanto el calentamiento global como el cambio climático se han visto significativamente alentados por la demanda energética de edificios residenciales y comerciales. Estos son responsables de un tercio del consumo mundial de energía y de hasta un 40\% de las emisiones de CO2, mayormente producidas por los sistemas de calefacción, ventilación y aire acondicionado (HVAC) destinados a garantizar el bienestar de sus ocupantes.
 
 Ante esta problemática, optimizar el control de los sistemas HVAC se plantea como una solución necesaria ante el creciente interés por garantizar la eficiencia energética de los edificios. Dicho control ha sido tradicionalmente llevado a cabo mediante técnicas basadas en modelos de predicción, los cuales no siempre garantizan la maximización del confort de los ocupantes y, al mismo tiempo, la minimización del consumo energético.
 
@@ -33,6 +33,8 @@ En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el d
 * [plots](https://github.com/manjavacas/drl-building/tree/main/plots): datos y gráficos generados a partir de los resultados de las simulaciones.
 * [tensorboard_logs](https://github.com/manjavacas/drl-building/tree/main/tensorboard_log): _logs_ registrados durante los entrenamiento y empleados por [TensorBoard](https://www.tensorflow.org/tensorboard).
 
-## Información adicional
+## Desarrollo de Energym
 
 Los resultados han sido obtenidos a partir del entrenamiento y ejecución de diferentes agentes en el entorno de ejecución de simulaciones energéticas [Energym](https://github.com/jajimer/energym) (versión 1.0.0), elaborado a lo largo de este TFM. Pulsa [aquí](https://energym.readthedocs.io/) para acceder a la documentación de Energym.
+
+![Energym](https://github.com/manjavacas/drl-building/tree/main/images/energym_diagram.png)
