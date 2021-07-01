@@ -31,7 +31,7 @@ En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el d
 * [mlruns](https://github.com/manjavacas/drl-building/tree/main/mlruns/0): historial de ejecuciones registrado por [MLflow](https://mlflow.org/).
 * [models](https://github.com/manjavacas/drl-building/tree/main/models): modelos entrenados.
 * [plots](https://github.com/manjavacas/drl-building/tree/main/plots): datos y gráficos generados a partir de los resultados de las simulaciones.
-* [tensorboard_logs](https://github.com/manjavacas/drl-building/tree/main/tensorboard_log): _logs_ registrados durante los entrenamiento y empleados por [TensorBoard](https://www.tensorflow.org/tensorboard).
+* [tensorboard_logs](https://github.com/manjavacas/drl-building/tree/main/tensorboard_log): _logs_ registrados durante los entrenamientos y empleados por [TensorBoard](https://www.tensorflow.org/tensorboard).
 
 ## Desarrollo de Energym 💡
 
