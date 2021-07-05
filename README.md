@@ -1,6 +1,6 @@
 **Trabajo Fin de Máster. Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores**
 
-[Antonio Manjavacas Lucas](<manjavacas@correo.ugr.es>)
+**Antonio Manjavacas Lucas**
 
 Curso 2020-2021
 
