@@ -1,0 +1,107 @@
+\chapter{Conclusiones}
+\label{ch:5}
+
+En este último capítulo quedan resumidas las principales aportaciones de este trabajo, haciendo especial énfasis en la consecución de los objetivos propuestos y los resultados obtenidos. Finalmente, se detallarán posibles trabajos futuros, así como las principales lecciones aprendidas tras realizar este proyecto.
+
+\section{Conclusiones}
+
+Este trabajo ha tratado de aportar soluciones a un problema aún abierto como es el de la aplicación de RL/DRL en el control óptimo de sistemas HVAC. Se trata de un campo repleto de posibilidades, y que sin duda seguirá creciendo en popularidad en los próximos años.
+
+El desarrollo de Energym es un primer paso hacia la estandarización de este campo, un pilar fundamental de cara a poder estudiar y adoptar las mejores soluciones en control HVAC, garantizando así la reducción del consumo energético y el bienestar de las personas. Se trata de una idea pionera, funcional y que responde a las necesidades expresadas por la comunidad científica.
+
+Por otro lado, la experimentación llevada a cabo en este proyecto pretende, no sólo demostrar la eficacia de Energym como entorno de ejecución de simulaciones energéticas, sino también evidenciar la profundidad y complejidad que supone este problema. Así, en el marco de este proyecto, hemos visto una pequeña parte de la inmensa cantidad de configuraciones, variables y técnicas que pueden afectar al rendimiento de los algoritmos de RL/DRL en control HVAC, abriendo la puerta a futuros trabajos que aprovechen el potencial de Energym en diferentes ámbitos de aplicación. 
+
+A su vez, tanto la herramienta desarrollada como el conocimiento adquirido a lo largo de este proyecto permiten plantear cuestiones sobre aspectos hasta el momento asumidos, como la efectividad de las funciones de recompensa expuestas en la literatura, o la capacidad de generalización de modelos entrenados en condiciones muy concretas. Así, Energym pretende arrojar luz sobre algunas de estas cuestiones y servir como un marco de pruebas estándar sobre el que poder corroborar diferentes hipótesis.
+
+Un aspecto a considerar es cómo este tipo de soluciones de control podrían ser aplicadas de forma exitosa en entornos reales, dada su complejidad en comparación con los entornos simulados, donde las variables que influyen en el control se encuentran perfectamente identificadas. Atendiendo a la literatura, existen limitadas aplicaciones reales basadas en métodos de RL \cite{costanzo2016experimental,wang2020reinforcement} y menos aún que hagan uso de algoritmos de DRL \cite{wang2020reinforcement}. Se trata, pues, de un problema abierto y complejo, para el cual no se cuenta con suficientes aportaciones como para poder ofrecer una respuesta precisa. Así, un objetivo a largo será que el número de soluciones probadas en entornos reales aumente a medida que este campo alcance su madurez.
+
+Otro factor de relevancia son los tiempos de entrenamiento requeridos por este tipo de agentes, crecientes a medida que la complejidad y los escenarios contemplados aumentan. Esto pone en riesgo la escalabilidad de estos sistemas, siendo una posible solución un primer entrenamiento estático que permita ubicar al modelo en el entorno y un posterior entrenamiento \textit{online} que responda a cambios menores \cite{azuatalam2020reinforcement}.
+
+Finalmente, la búsqueda de dicha escalabilidad ha empujado al desarrollo de este campo desde la perspectiva de los sistemas multiagente \cite{nagarathinam2020marco,yu2020multi,li2015multi}, ofreciendo un control HVAC descentralizado y flexible entre diferentes agentes independientes. Se trata de una idea prometedora y bastante reciente, de la cual cabe esperar importantes avances en los próximos años.
+
+\section{Cobertura de objetivos}
+
+A continuación, abordaremos la consecución de los diferentes objetivos planteados al inicio de este proyecto:
+
+\begin{tcolorbox}[colbacktitle=green!30!white, title=Subobjetivo 1, coltitle=black, fonttitle=\bfseries]
+Comprensión de los fundamentos del aprendizaje por refuerzo y su aplicación en control HVAC.
+\end{tcolorbox}
+
+En el Capítulo \ref{ch:2} se han presentado los fundamentos del aprendizaje por refuerzo y aprendizaje profundo por refuerzo, así como gran parte de los algoritmos que conforman el estado del arte. Posteriormente, se ha abordado su aplicabilidad en el ámbito del control HVAC, presentando el marco formal empleado para definir este problema.
+
+Finalmente, se han descrito diferentes aplicaciones de RL/DRL en control HVAC presentes en la literatura, evidenciando las motivaciones que impulsaron el desarrollo de este proyecto.
+
+\begin{tcolorbox}[colbacktitle=green!30!white, title=Subobjetivo 2, coltitle=black, fonttitle=\bfseries]
+Extensión de la librería Python \href{https://github.com/jajimer/energym}{Energym} haciendo uso de la herramienta \href{https://gym.openai.com/}{Gym} de OpenAI.
+\end{tcolorbox}
+
+En el Capítulo \ref{ch:3} se ha descrito el conjunto de actividades llevadas a cabo en el desarrollo de Energym como parte de un equipo de trabajo profesional. Dichas tareas han supuesto la extensión de las funcionalidades de Energym, adaptándolo a diferentes entornos de simulación y facilitando su integración con librerías de DRL como Stable Baselines3.
+
+Todo este proceso de implementación ha estado completamente ligado a la interfaz de programación para entornos de RL que ofrece OpenAI Gym, aprovechando las ventajas que esta herramienta ofrece para desarrollar Energym de una forma estandarizada y escalable.
+
+\begin{tcolorbox}[colbacktitle=green!30!white, title=Subobjetivo 3, coltitle=black, fonttitle=\bfseries]
+Entrenamiento monitorizado de diferentes algoritmos de DRL disponibles en \href{https://github.com/DLR-RM/stable-baselines3}{Stable Baselines3} haciendo uso de las herramientas \href{https://tensorflow.org/tensorboard}{TensorBoard} y \href{https://mlflow.org/}{MLflow}.
+\end{tcolorbox}
+
+En el Capítulo \ref{ch:4} se abordó el uso de múltiples algoritmos de DRL disponibles en Stable Baselines3 en combinación con Energym para ilustrar su aplicación en control HVAC. Esto supuso el entrenamiento y ejecución de los agentes en diferentes entornos y condiciones de simulación (espacios de acciones, climas...) de cara a evaluar y comparar los resultados obtenidos.
+
+Por otro lado, este proceso fue continuamente monitorizado haciendo uso de las herramientas TensorBoard y MLflow. La primera sirvió para monitorizar el aprendizaje, mientras que la segunda sirvió para registrar los experimentos realizados y sus configuraciones. Todo el proceso de integración de Energym con estas herramientas quedó detallado en el Capítulo \ref{ch:3}.
+
+\begin{tcolorbox}[colbacktitle=green!30!white, title=Subobjetivo 4, coltitle=black, fonttitle=\bfseries]
+Comparativa de los resultados obtenidos para cada uno de los agentes en diferentes contextos de clima y espacios de acciones (discreto y continuo).
+\end{tcolorbox}
+
+La sección \ref{sec:results} del Capítulo \ref{ch:4} detalla los resultados obtenidos tras la experimentación con diferentes algoritmos de DRL en combinación con Energym. En los entornos discretos, ningún agente logró superar de forma significativa el rendimiento de un agente basado en reglas, siendo A2C el algoritmo que consiguió obtener los resultados más similares. 
+
+Por otro lado, en los entornos continuos sí que se lograron importantes mejoras con respecto al agente basado en reglas, siendo SAC y DDPG los algoritmos que ofrecieron mejores resultados. De esta forma, queda demostrada la posibilidad de superar el rendimiento de un agente basado en reglas haciendo uso de un control HVAC basado en DRL.
+
+\begin{tcolorbox}[colbacktitle=green!30!white, title=Subobjetivo 5, coltitle=black, fonttitle=\bfseries]
+Estudio de la recompensa obtenida por un agente en función de la importancia asignada a confort y consumo energético.
+\end{tcolorbox}
+
+Dentro de los experimentos avanzados llevados a cabo en el Capítulo \ref{ch:4} (sección \ref{sec:conf-con}), se estudió la influencia de las ponderaciones de consumo y confort en la función de recompensa empleada por los agentes de DRL. 
+
+El ejemplo ilustrativo mostrado en esta sección, planteó cómo un agente con un mayor énfasis en la reducción del consumo energético es capaz de consumir menos a costa de un mayor número penalizaciones por violación de confort.
+
+\begin{tcolorbox}[colbacktitle=green!30!white, title=Subobjetivo 5, coltitle=black, fonttitle=\bfseries]
+Ejecución de pruebas de robustez que permitan conocer el rendimiento de los agentes en diferentes climas a los empleados como entrenamiento.
+\end{tcolorbox}
+
+En la sección \ref{sec:robustez} del Capítulo \ref{ch:4} se evaluaron diferentes situaciones en las que un agente era ejecutado en un entorno diferente al empleado en su entrenamiento. Así, las pruebas realizadas revelaron que un agente entrenado en un entorno templado (\textit{mixed}) es capaz de ofrecer muy buenos resultados en un clima cálido, no ocurriendo lo mismo en un clima frío, donde dicho rendimiento disminuye.
+
+\begin{tcolorbox}[colbacktitle=green!30!white, title=Subobjetivo 5, coltitle=black, fonttitle=\bfseries]
+Aplicación de \textit{curriculum learning} con diferentes agentes y análisis de los resultados obtenidos.
+\end{tcolorbox}
+
+Finalmente, en la sección \ref{sec:cv-learning} del Capítulo \ref{ch:4} se ilustró la aplicación de \textit{curriculum learning} en el ámbito de este problema. El ejemplo planteado mostró cómo un agente entrenado progresivamente a partir de los entornos \textit{hot} y \textit{cool} es capaz de ofrecer un mejor rendimiento que un agente entrenado únicamente en un entorno \textit{mixed}.
+
+\section{Trabajo futuro}
+\label{sec:trabajo-futuro}
+
+Son muchas las posibilidades y líneas de trabajo que pueden derivarse de este proyecto. Como hemos podido ver a lo largo de su desarrollo, la cantidad de técnicas, configuraciones, entornos o climas a emplear abren la puerta a un sinfín de experimentos de relevancia en el campo. A continuación, se propone un listado de algunas de las principales metas planteadas como trabajo futuro\footnote{Muchas de estas posibles mejoras se encuentran descritas en el listado de \textit{issues} del repositorio de Energym: \url{https://github.com/jajimer/energym/issues}.}:
+
+\begin{itemize}
+    \item Ampliación de la compatibilidad de Energym con otros entornos de simulación como \href{https://www.openmodelica.org/}{OpenModelica} o \href{https://es.mathworks.com/products/simulink.html}{Simulink}.
+    \item Experimentación con otros entornos, climas y variables. Actualmente se encuentra en proceso la integración de Energym en el entorno  \href{https://github.com/NREL/EnergyPlus/blob/v8.6.0/testfiles/2ZoneDataCenterHVAC_wEconomizer.idf}{Data Center}, el cual incluye como variables de entrada tanto los \textit{setpoints} de calefacción y refrigeración como la ventilación del edificio.
+    \item Implementación de entornos con espacios de acciones multidiscretos, así como ampliación del espacio de acciones empleado por los entornos discretos.
+    \item Evaluación de otros algortimos de DRL implementados tanto en Stable Baselines3 (por ejemplo, TD3) como en otras librerías como \href{https://docs.ray.io/en/master/rllib.html}{RLlib}, \href{https://www.tensorflow.org/agents}{TensorFlow Agents} o \href{https://github.com/keras-rl/keras-rl}{Keras-RL}.
+    \item Comparar los resultados obtenidos para diferentes funciones de recompensa, así como implementar ponderaciones dinámicas (por ejemplo, variables en el tiempo o dependientes del número de personas en el edificio) para consumo y confort.
+    \item Profundización en el uso de \textit{curriculum learning}, estudiando la capacidad de generalización en diferentes entornos donde no sólo cambia el clima sino también las características del edificio.
+    \item Realización de pruebas de robustez adicionales que permitan cubrir todo el espacio de combinaciones climáticas posibles.
+    \item Extensión de las funcionalidades de Energym para el procesamiento y representación automática de los datos generados.
+    \item Entrenamiento y ejecución de los agentes en la nube, haciendo uso de servicios como \href{https://cloud.google.com/}{Google Cloud}, \href{https://azure.microsoft.com/}{Microsoft Azure} o \href{https://aws.amazon.com/}{Amazon Web Services}.
+\end{itemize}
+
+Tras la conclusión de este proyecto, un objetivo a corto plazo será dar conocer Energym y sus aplicaciones mediante publicaciones científicas en revistas especializadas en este campo, favoreciendo así su difusión y madurez. Esta labor se enmarca dentro del proyecto \href{https://jgromero.github.io/proficient/}{PROFICIENT}, financiado por el programa \textit{EXPLORA} del Ministerio de Ciencia, Innovación y Universidades (TIN2017-91223-EXP) y orientado al desarrollo de soluciones basadas en DRL para el control energético eficiente de edificios.
+
+\section{Valoración personal}
+
+Realizar un trabajo de fin de máster que involucrase la profundización en el campo del aprendizaje por refuerzo fue una de las principales motivaciones a adentrarme de lleno en este proyecto. A su vez, el hecho de poder aunar mi interés por este campo y su aplicación en la resolución de problemas reales fueron motivos de peso para decantarme por un trabajo de tal envergadura. 
+
+Considero al aprendizaje por refuerzo como un paradigma de enorme potencial, en ocasiones eclipsado por el aprendizaje supervisado y no supervisado, pero que en los últimos años ha conseguido una gran repercusión gracias a las aportaciones y popularidad de proyectos como \href{https://deepmind.com/research/case-studies/alphago-the-story-so-far}{AlphaGo} o \href{https://deepmind.com/blog/article/alphazero-shedding-new-light-grand-games-chess-shogi-and-go}{AlphaZero}. Actualmente contamos con aplicaciones de RL en inmensidad de ámbitos de lo más diversos, siendo el control energético un dominio llamativo y de especial relevancia para la sociedad.
+
+Desde una perspectiva personal, el uso de RL en el control de sistemas HVAC abre la puerta a una nueva forma mucho más eficiente de garantizar el bienestar de las personas. Si a un control eficiente de estos sistemas sumásemos fuentes de energía renovables, contaríamos con edificios energéticamente autorregulados y sostenibles, algo prioritario ante la amenaza del cambio climático y el calentamiento global.
+ 
+Finalmente, considero que las aportaciones de este trabajo podrán ser especialmente relevantes para la comunidad científica involucrada en este ámbito. El desarrollo de Energym y la experimentación propuesta en este trabajo abogan por una visión común y unificada de las propuestas que conforman el estado del arte en control HVAC y RL, facilitando el progreso, la reproducibilidad y la estandarización de las soluciones existentes y aún por desarrollar.
+
+

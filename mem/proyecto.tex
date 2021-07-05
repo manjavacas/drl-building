@@ -1,0 +1,178 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+
+\usepackage{csquotes}
+
+\decimalpoint
+\usepackage{dcolumn}
+\newcolumntype{.}{D{.}{\esperiod}{-1}}
+\makeatletter
+\addto\shorthandsspanish{\let\esperiod\es@period@code}
+\makeatother
+
+\RequirePackage{verbatim}
+
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{afterpage}
+\usepackage{longtable}
+
+\usepackage{subfigure}
+
+\usepackage{amsmath}
+
+\usepackage{eurosym}
+
+\usepackage{lscape}
+
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{colortbl, longtable}
+
+\usepackage[section]{placeins}
+
+\usepackage{tcolorbox}
+%\usepackage{footnote}
+%\usepackage{etoolbox}
+%\BeforeBeginEnvironment{tcolorbox}{\savenotes}
+%\AfterEndEnvironment{tcolorbox}{\spewnotes}
+
+\usepackage{dsfont} 
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\newcommand{\myTitle}{Deep Reinforcement Learning para control energético eficiente de edificios\xspace}
+\newcommand{\myDegree}{Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores\xspace}
+\newcommand{\myName}{Antonio Manjavacas Lucas\xspace}
+\newcommand{\myProf}{Juan Gómez Romero\xspace}
+\newcommand{\myOtherProf}{Miguel Molina Solana\xspace}
+\newcommand{\myFaculty}{Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación\xspace}
+\newcommand{\myFacultyShort}{E.T.S. de Ingenierías Informática y de Telecomunicación\xspace}
+\newcommand{\myDepartment}{Departamento de Ciencias de la Computación e Inteligencia Artificial\xspace}
+\newcommand{\myUni}{\protect{Universidad de Granada}\xspace}
+\newcommand{\myLocation}{Granada\xspace}
+\newcommand{\myTime}{\today\xspace}
+\newcommand{\myVersion}{Versión 0.1\xspace}
+
+\usepackage{url}
+\usepackage{colortbl,longtable}
+\usepackage[stable]{footmisc}
+\usepackage{index}
+
+\usepackage[ruled,vlined]{algorithm2e}
+
+\usepackage{biblatex}
+\addbibresource{bibliografia.bib}
+
+\makeindex
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
+\fancyhead[RO,LE]{\textbf{\thepage}}
+
+\renewcommand{\chaptermark}[1]{\markboth{\textbf{#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}}
+
+\setlength{\headheight}{1.5\headheight}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Utilizar con \begin{teorema} \end{teorema} ...
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{ejemplo}{Ejemplo}[chapter]
+\newtheorem{definicion}{Definición}[chapter]
+
+% Minimizar fragmentacion de codigo
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+\newcommand{\bigrule}{\titlerule[0.5mm]}
+
+% Evitar que en las páginas en blanco se muestren las cabeceras
+\makeatletter
+\def\clearpage{%
+  \ifvmode
+    \ifnum \@dbltopnum =\m@ne
+      \ifdim \pagetotal <\topskip
+        \hbox{}
+      \fi
+    \fi
+  \fi
+  \newpage
+  \thispagestyle{empty}
+  \write\m@ne{}
+  \vbox{}
+  \penalty -\@Mi
+}
+\makeatother
+
+\usepackage{pdfpages}
+
+%%%%%%%% algorithm2e - spanish %%%%%%%%
+\renewcommand{\listalgorithmcfname}{Índice de algoritmos}%
+\renewcommand{\algorithmcfname}{Algoritmo}%
+\SetKwInput{KwIn}{Entrada}%
+\SetKwInput{KwOut}{Salida}%
+\SetKwInput{KwResult}{Resultado}%
+\SetKw{KwRet}{devuelve}%
+\SetKw{Return}{devolver}%
+\SetKwBlock{Begin}{Inicio}{fim}%
+\SetKwRepeat{Repeat}{repetir}{mientras que}%
+\SetKwIF{If}{ElseIf}{Else}{si}{entonces}{si no si}{si no}{fin si}%
+\SetKwFor{For}{para}{fa\c{c}a}{fim para}%
+\SetKwFor{ForEach}{para cada}{hacer}{fin para cada}%
+\SetKwFor{While}{mientras}{hacer}{fin mientras}%
+
+\begin{document}
+
+
+\setcounter{tocdepth}{4}
+
+\input{portada/portada}
+\input{prefacios/prefacio}
+\frontmatter
+\tableofcontents
+\listoffigures
+\listoftables
+\listofalgorithms
+
+\mainmatter
+\setlength{\parskip}{5pt}
+
+%% Capitulos
+
+\input{capitulos/01_Introduccion}
+
+\input{capitulos/02_MarcoTeorico}
+
+\input{capitulos/03_EntornoSimulacion}
+
+\input{capitulos/04_Experimentacion}
+
+\input{capitulos/05_Conclusiones}
+
+\printbibliography
+
+\newpage
+% \nocite{*}
+
+%% Apendices
+%\appendix
+%\input{apendices/...}
+
+\chapter*{}
+\thispagestyle{empty}
+
+\end{document}

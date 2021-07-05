@@ -32,6 +32,7 @@ En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el d
 * [models](https://github.com/manjavacas/drl-building/tree/main/models): modelos entrenados.
 * [plots](https://github.com/manjavacas/drl-building/tree/main/plots): datos y gráficos generados a partir de los resultados de las simulaciones.
 * [tensorboard_logs](https://github.com/manjavacas/drl-building/tree/main/tensorboard_log): _logs_ registrados durante los entrenamientos y empleados por [TensorBoard](https://www.tensorflow.org/tensorboard).
+* [mem](https://github.com/manjavacas/drl-building/tree/main/mem): memoria del proyecto.
 
 ## Desarrollo de Energym 💡
 
