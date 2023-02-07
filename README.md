@@ -38,7 +38,7 @@ En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el d
 
 ## Desarrollo de ~Energym~ **Sinergym** 💡
 
-Los resultados han sido obtenidos a partir del entrenamiento y ejecución de diferentes agentes en el entorno de ejecución de simulaciones energéticas [Energym](https://github.com/jajimer/energym) (versión 1.0.0), elaborado a lo largo de este TFM. Pulsa [aquí](https://energym.readthedocs.io/) para acceder a la documentación de Energym.
+Los resultados han sido obtenidos a partir del entrenamiento y ejecución de diferentes agentes en el entorno de ejecución de simulaciones energéticas ~Energym~ [Sinergym](https://github.com/jajimer/energym) (versión 1.0.0), elaborado a lo largo de este TFM. Pulsa [aquí](https://energym.readthedocs.io/) para acceder a la documentación de ~Energym~ Sinergym.
 
 ![Arquitectura de Energym](/images/energym_diagram.png)
 
