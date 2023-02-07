@@ -1,3 +1,5 @@
+> ⚠️ El entorno elaborado en este trabajo y previamente denominado _Energym_ posteriormente pasó a renombrarse como **Sinergym**.
+
 **Trabajo Fin de Máster. Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores**
 
 **Antonio Manjavacas Lucas**
@@ -34,7 +36,7 @@ En respuesta a esta necesidad, el objetivo perseguido en este trabajo será el d
 * [tensorboard_logs](https://github.com/manjavacas/drl-building/tree/main/tensorboard_log): _logs_ registrados durante los entrenamientos y empleados por [TensorBoard](https://www.tensorflow.org/tensorboard).
 * [mem](https://github.com/manjavacas/drl-building/tree/main/mem): memoria del proyecto.
 
-## Desarrollo de Energym 💡
+## Desarrollo de ~Energym~ **Sinergym** 💡
 
 Los resultados han sido obtenidos a partir del entrenamiento y ejecución de diferentes agentes en el entorno de ejecución de simulaciones energéticas [Energym](https://github.com/jajimer/energym) (versión 1.0.0), elaborado a lo largo de este TFM. Pulsa [aquí](https://energym.readthedocs.io/) para acceder a la documentación de Energym.
 
