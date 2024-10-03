@@ -1,4 +1,4 @@
-> ⚠️ El entorno elaborado en este trabajo y previamente denominado _Energym_ posteriormente pasó a renombrarse como **Sinergym**.
+> ⚠️ El entorno elaborado en este trabajo y previamente denominado _Energym_ posteriormente pasó a renombrarse como [**Sinergym**](https://github.com/ugr-sail/sinergym).
 
 **Trabajo Fin de Máster. Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores**
 
